@@ -121,6 +121,8 @@
     <BundleResource Include="ROXIMITYSDK.bundle\ROXIMITYWebview~iphone.nib\runtime.nib" />
     <BundleResource Include="ROXIMITYSDK.bundle\en.lproj\InfoPlist.strings" />
     <BundleResource Include="Sounds\Toilet-Flush.aif" />
+    <BundleResource Include="Sounds\motorcycle.aif" />
+    <BundleResource Include="Sounds\tada.aif" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -130,8 +132,6 @@
     <None Include="Entitlements.plist" />
     <None Include="packages.config" />
     <None Include="roximity.caf" />
-    <None Include="Sounds\motorcycle.aif" />
-    <None Include="Sounds\tada.aif" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
