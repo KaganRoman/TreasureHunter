@@ -111,7 +111,7 @@ namespace BeaconTest
 			if (added) {
 				_sound.Vibrate ();
 				if (l.All (b => b.Visited))
-					_sound.PlayMp3File ("tada.aif");
+					_sound.PlayMp3File ("Sounds/tada.aif");
 			}
 			return l;
 		}
