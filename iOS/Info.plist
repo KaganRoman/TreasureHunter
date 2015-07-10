@@ -62,7 +62,12 @@
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>bluetooth-central</string>
+		<string>fetch</string>
 		<string>remote-notification</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Hello</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Hello</string>
 </dict>
 </plist>

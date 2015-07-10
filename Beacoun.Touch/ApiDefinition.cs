@@ -138,15 +138,36 @@ namespace Beacoun.Touch
 		[Export ("didRegisterForRemoteNotifications:")]
 		void DidRegisterForRemoteNotifications (NSData deviceToken);
 
+		//+(void) didRegisterUserNotifications:(UIUserNotificationSettings *)notificationSettings;
+		[Static]
+		[Export ("didRegisterUserNotifications:")]
+		void DidRegisterUserNotifications (UIUserNotificationSettings notificationSettings);
+
 		// +(void)didFailToRegisterForRemoteNotifications:(NSError *)error;
 		[Static]
 		[Export ("didFailToRegisterForRemoteNotifications:")]
 		void DidFailToRegisterForRemoteNotifications (NSError error);
 
+		//+(BOOL) didReceiveRemoteNotification:(UIApplication *)application userInfo:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler;
+		[Static]
+		[Export ("didReceiveRemoteNotification:userInfo:fetchCompletionHandler:")]
+		void DidReceiveRemoteNotification (UIApplication app, NSDictionary userInfo, Action<UIBackgroundFetchResult> fetchCompletionHandler);
+
+		//+(BOOL) didReceiveRemoteNotification:(UIApplication *)application userInfo:(NSDictionary *)userInfo;
+		[Static]
+		[Export ("didReceiveRemoteNotification:userInfo:")]
+		void DidReceiveRemoteNotification (UIApplication app, NSDictionary userInfo);
+
+		//+(BOOL) didReceiveLocalNotification:(UIApplication *) application notification:(UILocalNotification *)notification;
+		[Static]
+		[Export ("didReceiveLocalNotification:notification:")]
+		void DidReceiveLocalNotification (UIApplication app, UILocalNotification notification);
+
 		// +(void)deactivateLocation;
 		[Static]
 		[Export ("deactivateLocation")]
 		void DeactivateLocation ();
+
 
 		// +(void)activateLocation;
 		[Static]

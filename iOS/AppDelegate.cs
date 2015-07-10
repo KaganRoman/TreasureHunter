@@ -6,6 +6,7 @@ using Foundation;
 using UIKit;
 
 using Beacoun.Touch;
+using CoreLocation;
 
 namespace BeaconTest.iOS
 {
@@ -25,13 +26,15 @@ namespace BeaconTest.iOS
 
 			var res = base.FinishedLaunching (app, options);
 
+			var r = new CLLocationManager ();
+			r.RequestAlwaysAuthorization ();
+
 			try
 			{
 				var appId = "7ca3ad0cf7904952a675a645a00b9c51";
-				//	var launchOptions = options ?? new NSDictionary();
-				//	var engineOptions = new NSDictionary();
-				//	Beacoun.Touch.ROXIMITYEngine.StartWithLaunchOptions (launchOptions, engineOptions, appId);
 				ROXIMITYEngine.StartWithLaunchOptions (options, null, appId, new BeaconServiceTouch());
+				ROXIMITYEngine.SetBeaconRangeDelegate(new BeaconRangeDelegate(), ROXBeaconRangeUpdateInterval.Fastest);
+
 			}
 			catch(Exception e) {
 			}

@@ -134,6 +134,7 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="BeaconServiceTouch.cs" />
+    <Compile Include="BeaconRangeDelegate.cs" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="ITunesArtwork" />
