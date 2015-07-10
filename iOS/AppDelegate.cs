@@ -7,6 +7,7 @@ using UIKit;
 
 using Beacoun.Touch;
 using CoreLocation;
+using Xamarin.Forms;
 
 namespace BeaconTest.iOS
 {
@@ -29,16 +30,11 @@ namespace BeaconTest.iOS
 			var r = new CLLocationManager ();
 			r.RequestAlwaysAuthorization ();
 
-			try
-			{
-				var appId = "7ca3ad0cf7904952a675a645a00b9c51";
-				ROXIMITYEngine.StartWithLaunchOptions (options, null, appId, new BeaconServiceTouch());
-				ROXIMITYEngine.SetBeaconRangeDelegate(new BeaconRangeDelegate(), ROXBeaconRangeUpdateInterval.Fastest);
+			var rangeDelegate = DependencyService.Get<IBeaconReceiver> () as BeaconRangeDelegate;
 
-			}
-			catch(Exception e) {
-			}
-
+			var appId = "7ca3ad0cf7904952a675a645a00b9c51";
+			ROXIMITYEngine.StartWithLaunchOptions (options, null, appId, new BeaconServiceTouch());
+			ROXIMITYEngine.SetBeaconRangeDelegate(rangeDelegate, ROXBeaconRangeUpdateInterval.Fastest);
 
 			return res;
 		}
