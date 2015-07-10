@@ -4,19 +4,38 @@
 			x:Class="BeaconTest.MainPage"
 			Padding="10,50,10,10">
 	<ContentPage.Content>
-		<ListView ItemsSource="{Binding BeaconsStatus}" HasUnevenRows="true">
-			<ListView.ItemTemplate>
-			    <DataTemplate>
-			    <ViewCell Height="50">
-			    	<StackLayout Orientation="Horizontal">
-			    		<Label Text="{Binding Id}"/>
-			    		<Label Text="{Binding Name}"/>
-			    		<Label Text="{Binding ProximityValue}"/>
-			    		<Label Text="{Binding ProximityString}"/>
-			    	</StackLayout>
-			    </ViewCell>
-			    </DataTemplate>
-			  </ListView.ItemTemplate>
-		</ListView>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="Auto"/>
+			</Grid.RowDefinitions>
+
+			<ListView Grid.Row="0" ItemsSource="{Binding BeaconsStatus}" HasUnevenRows="true">
+				<ListView.ItemTemplate>
+				    <DataTemplate>
+				    <ViewCell Height="50">
+				    	<StackLayout Orientation="Horizontal">
+				    		<Label Text="{Binding Id}"/>
+				    		<Label Text="{Binding Name}"/>
+				    		<Label Text="{Binding ProximityValue}"/>
+				    		<Label Text="{Binding ProximityString}"/>
+				    	</StackLayout>
+				    </ViewCell>
+				    </DataTemplate>
+				  </ListView.ItemTemplate>
+			</ListView>
+
+			<Grid Grid.Row="1">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+				</Grid.ColumnDefinitions>
+				<Label Text="{Binding Timer}" FontSize="24" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+				<StackLayout Grid.Column="1" Orientation="Vertical">
+					<Button Text="Start" Command="{Binding StartCommand}"/>
+					<Button Text="Stop" Command="{Binding StopCommand}"/>
+				</StackLayout>
+			</Grid>
+		</Grid>
 	</ContentPage.Content>
 </ContentPage>
