@@ -120,6 +120,7 @@
     <BundleResource Include="ROXIMITYSDK.bundle\ROXIMITYWebview~iphone.nib\objects.nib" />
     <BundleResource Include="ROXIMITYSDK.bundle\ROXIMITYWebview~iphone.nib\runtime.nib" />
     <BundleResource Include="ROXIMITYSDK.bundle\en.lproj\InfoPlist.strings" />
+    <BundleResource Include="Sounds\Toilet-Flush.aif" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -129,12 +130,15 @@
     <None Include="Entitlements.plist" />
     <None Include="packages.config" />
     <None Include="roximity.caf" />
+    <None Include="Sounds\motorcycle.aif" />
+    <None Include="Sounds\tada.aif" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="BeaconServiceTouch.cs" />
     <Compile Include="BeaconRangeDelegate.cs" />
+    <Compile Include="AudioService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="ITunesArtwork" />
@@ -144,5 +148,6 @@
   <Import Project="..\packages\Xamarin.Forms.1.3.3.6323\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.3.3.6323\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
   <ItemGroup>
     <Folder Include="ROXIMITYSDK.bundle\" />
+    <Folder Include="Sounds\" />
   </ItemGroup>
 </Project>

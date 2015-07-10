@@ -2,38 +2,73 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 			xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 			x:Class="BeaconTest.MainPage"
-			Padding="10,50,10,10">
+			xmlns:local="clr-namespace:BeaconTest;assembly=BeaconTest"
+			BackgroundColor="#E6A93D"
+			Padding="10,30,10,10">
+
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<local:StatusColorConverter x:Key="colorStatusConvert"/>
+		</ResourceDictionary>
+	</ContentPage.Resources>
+
 	<ContentPage.Content>
 		<Grid>
 			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
 				<RowDefinition Height="*"/>
 				<RowDefinition Height="Auto"/>
 			</Grid.RowDefinitions>
 
-			<ListView Grid.Row="0" ItemsSource="{Binding BeaconsStatus}" HasUnevenRows="true">
-				<ListView.ItemTemplate>
-				    <DataTemplate>
-				    <ViewCell Height="50">
-				    	<StackLayout Orientation="Horizontal">
-				    		<Label Text="{Binding Id}"/>
-				    		<Label Text="{Binding Name}"/>
-				    		<Label Text="{Binding ProximityValue}"/>
-				    		<Label Text="{Binding ProximityString}"/>
-				    	</StackLayout>
-				    </ViewCell>
-				    </DataTemplate>
-				  </ListView.ItemTemplate>
-			</ListView>
+			<Label Text="Threasure Hunter" TextColor="White" FontSize="24" HorizontalOptions="CenterAndExpand"/>
 
 			<Grid Grid.Row="1">
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="*"/>
 					<ColumnDefinition Width="*"/>
 				</Grid.ColumnDefinitions>
-				<Label Text="{Binding Timer}" FontSize="24" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+				</Grid.RowDefinitions>
+
+				<BoxView Grid.Row="0" Grid.Column="0" HeightRequest="20" 
+					Color="{Binding BeaconsStatus[0], Converter={StaticResource colorStatusConvert}}"/>
+				<BoxView Grid.Row="0" Grid.Column="1" HeightRequest="20" 
+					Color="{Binding BeaconsStatus[1], Converter={StaticResource colorStatusConvert}}"/>
+				<BoxView Grid.Row="1" Grid.Column="0" HeightRequest="20" 
+					Color="{Binding BeaconsStatus[2], Converter={StaticResource colorStatusConvert}}"/>
+				<BoxView Grid.Row="1" Grid.Column="1" HeightRequest="20" 
+					Color="{Binding BeaconsStatus[3], Converter={StaticResource colorStatusConvert}}"/>
+				<BoxView Grid.Row="2" Grid.Column="0" HeightRequest="20" 
+					Color="{Binding BeaconsStatus[4], Converter={StaticResource colorStatusConvert}}"/>
+				<BoxView Grid.Row="2" Grid.Column="1" HeightRequest="20" 
+					Color="{Binding BeaconsStatus[5], Converter={StaticResource colorStatusConvert}}"/>
+				<BoxView Grid.Row="3" Grid.Column="0" HeightRequest="20" 
+					Color="{Binding BeaconsStatus[6], Converter={StaticResource colorStatusConvert}}"/>
+				<BoxView Grid.Row="3" Grid.Column="1" HeightRequest="20" 
+					Color="{Binding BeaconsStatus[7], Converter={StaticResource colorStatusConvert}}"/>
+				<BoxView Grid.Row="4" Grid.Column="0" HeightRequest="20" 
+					Color="{Binding BeaconsStatus[8], Converter={StaticResource colorStatusConvert}}"/>
+				<BoxView Grid.Row="4" Grid.Column="1" HeightRequest="20" 
+					Color="{Binding BeaconsStatus[9], Converter={StaticResource colorStatusConvert}}"/>
+			</Grid>
+
+			<Grid Grid.Row="2">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+				</Grid.ColumnDefinitions>
+				<StackLayout Orientation="Vertical">
+					<Label Text="{Binding Timer}" TextColor="White" FontSize="24" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+					<Label Text="{Binding Found}" TextColor="White" FontSize="14" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+				</StackLayout>
 				<StackLayout Grid.Column="1" Orientation="Vertical">
-					<Button Text="Start" Command="{Binding StartCommand}"/>
-					<Button Text="Stop" Command="{Binding StopCommand}"/>
+					<Button Text="Start" TextColor="White" Command="{Binding StartCommand}"/>
+					<Button Text="Stop" TextColor="White" Command="{Binding StopCommand}"/>
 				</StackLayout>
 			</Grid>
 		</Grid>
