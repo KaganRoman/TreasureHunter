@@ -16,11 +16,11 @@ namespace BeaconTest
 			var status = value as BeaconStatus;
 			if (status != null) {
 				if (status.Visited)
-					return Color.Green;
+					return Color.FromHex ("#009933");
 				if (status.ProximityValue == "2")
-					return Color.Red;
+					return Color.FromHex ("#FF6600");
 				if (status.ProximityValue == "3")
-					return Color.Yellow;
+					return Color.FromHex ("#FFCC00");
 				if (status.ProximityValue == "4")
 					return Color.Blue;
 			}

@@ -123,6 +123,7 @@
     <BundleResource Include="Sounds\Toilet-Flush.aif" />
     <BundleResource Include="Sounds\motorcycle.aif" />
     <BundleResource Include="Sounds\tada.aif" />
+    <BundleResource Include="Sounds\coin.wav" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />

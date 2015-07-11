@@ -65,7 +65,7 @@ namespace BeaconTest
 		public Xamarin.Forms.Command StopCommand
 		{
 			get {
-				return _stopCommand = _stopCommand ?? new Command (Stop, () => Started);
+				return _stopCommand = _stopCommand ?? new Command (() => Stop(), () => Started);
 			}
 		}
 
@@ -80,7 +80,7 @@ namespace BeaconTest
 
 		public string Found
 		{
-			get { return string.Format("Found {0} items", _beaconsStatus.Count(b => b.Visited)); }
+			get { return string.Format("Found {0} chests", _beaconsStatus.Count(b => b.Visited)); }
 		}
 
 
@@ -110,9 +110,14 @@ namespace BeaconTest
 			}
 			if (added) {
 				_sound.Vibrate ();
-				if (l.All (b => b.Visited))
+				if (l.All (b => b.Visited)) {
 					_sound.PlayMp3File ("Sounds/tada.aif");
-			}
+					if (Started)
+						Stop (false);
+				} else {
+					_sound.PlayMp3File ("Sounds/coin.wav");	
+				}
+			} 
 			return l;
 		}
 
@@ -136,9 +141,10 @@ namespace BeaconTest
 			Task.Factory.StartNew (StartTimer);
 		}
 
-		private void Stop()
+		private void Stop(bool playSound = true)
 		{
-			_sound.PlayMp3File ("Sounds/Toilet-Flush.aif");	
+			if(playSound)
+				_sound.PlayMp3File ("Sounds/Toilet-Flush.aif");	
 				
 			Started = false;
 			if (_timerCancel != null)

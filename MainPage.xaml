@@ -4,7 +4,7 @@
 			x:Class="BeaconTest.MainPage"
 			xmlns:local="clr-namespace:BeaconTest;assembly=BeaconTest"
 			BackgroundColor="#E6A93D"
-			Padding="10,30,10,10">
+			Padding="10,22,10,10">
 
 	<ContentPage.Resources>
 		<ResourceDictionary>
@@ -20,9 +20,9 @@
 				<RowDefinition Height="Auto"/>
 			</Grid.RowDefinitions>
 
-			<Label Text="Threasure Hunter" TextColor="White" FontSize="24" HorizontalOptions="CenterAndExpand"/>
+			<Label Text="Treasure Hunter" TextColor="White" FontSize="24" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
 
-			<Grid Grid.Row="1">
+			<Grid Grid.Row="1" Padding="40,20,40,10">
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="*"/>
 					<ColumnDefinition Width="*"/>
@@ -35,26 +35,16 @@
 					<RowDefinition Height="*"/>
 				</Grid.RowDefinitions>
 
-				<BoxView Grid.Row="0" Grid.Column="0" HeightRequest="20" 
-					Color="{Binding BeaconsStatus[0], Converter={StaticResource colorStatusConvert}}"/>
-				<BoxView Grid.Row="0" Grid.Column="1" HeightRequest="20" 
-					Color="{Binding BeaconsStatus[1], Converter={StaticResource colorStatusConvert}}"/>
-				<BoxView Grid.Row="1" Grid.Column="0" HeightRequest="20" 
-					Color="{Binding BeaconsStatus[2], Converter={StaticResource colorStatusConvert}}"/>
-				<BoxView Grid.Row="1" Grid.Column="1" HeightRequest="20" 
-					Color="{Binding BeaconsStatus[3], Converter={StaticResource colorStatusConvert}}"/>
-				<BoxView Grid.Row="2" Grid.Column="0" HeightRequest="20" 
-					Color="{Binding BeaconsStatus[4], Converter={StaticResource colorStatusConvert}}"/>
-				<BoxView Grid.Row="2" Grid.Column="1" HeightRequest="20" 
-					Color="{Binding BeaconsStatus[5], Converter={StaticResource colorStatusConvert}}"/>
-				<BoxView Grid.Row="3" Grid.Column="0" HeightRequest="20" 
-					Color="{Binding BeaconsStatus[6], Converter={StaticResource colorStatusConvert}}"/>
-				<BoxView Grid.Row="3" Grid.Column="1" HeightRequest="20" 
-					Color="{Binding BeaconsStatus[7], Converter={StaticResource colorStatusConvert}}"/>
-				<BoxView Grid.Row="4" Grid.Column="0" HeightRequest="20" 
-					Color="{Binding BeaconsStatus[8], Converter={StaticResource colorStatusConvert}}"/>
-				<BoxView Grid.Row="4" Grid.Column="1" HeightRequest="20" 
-					Color="{Binding BeaconsStatus[9], Converter={StaticResource colorStatusConvert}}"/>
+				<Frame Grid.Row="0" Grid.Column="0" Padding="0" BackgroundColor="{Binding BeaconsStatus[0], Converter={StaticResource colorStatusConvert}}"/>
+				<Frame Grid.Row="0" Grid.Column="1" Padding="0" BackgroundColor="{Binding BeaconsStatus[1], Converter={StaticResource colorStatusConvert}}"/>
+				<Frame Grid.Row="1" Grid.Column="0" Padding="0" BackgroundColor="{Binding BeaconsStatus[2], Converter={StaticResource colorStatusConvert}}"/>
+				<Frame Grid.Row="1" Grid.Column="1" Padding="0" BackgroundColor="{Binding BeaconsStatus[3], Converter={StaticResource colorStatusConvert}}"/>
+				<Frame Grid.Row="2" Grid.Column="0" Padding="0" BackgroundColor="{Binding BeaconsStatus[4], Converter={StaticResource colorStatusConvert}}"/>
+				<Frame Grid.Row="2" Grid.Column="1" Padding="0" BackgroundColor="{Binding BeaconsStatus[5], Converter={StaticResource colorStatusConvert}}"/>
+				<Frame Grid.Row="3" Grid.Column="0" Padding="0" BackgroundColor="{Binding BeaconsStatus[6], Converter={StaticResource colorStatusConvert}}"/>
+				<Frame Grid.Row="3" Grid.Column="1" Padding="0" BackgroundColor="{Binding BeaconsStatus[7], Converter={StaticResource colorStatusConvert}}"/>
+				<Frame Grid.Row="4" Grid.Column="0" Padding="0" BackgroundColor="{Binding BeaconsStatus[8], Converter={StaticResource colorStatusConvert}}"/>
+				<Frame Grid.Row="4" Grid.Column="1" Padding="0" BackgroundColor="{Binding BeaconsStatus[9], Converter={StaticResource colorStatusConvert}}"/>
 			</Grid>
 
 			<Grid Grid.Row="2">
@@ -67,8 +57,8 @@
 					<Label Text="{Binding Found}" TextColor="White" FontSize="14" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
 				</StackLayout>
 				<StackLayout Grid.Column="1" Orientation="Vertical">
-					<Button Text="Start" TextColor="White" Command="{Binding StartCommand}"/>
-					<Button Text="Stop" TextColor="White" Command="{Binding StopCommand}"/>
+					<Button Text="Search" TextColor="White" Command="{Binding StartCommand}"/>
+					<Button Text="Yo, Break" TextColor="White" Command="{Binding StopCommand}"/>
 				</StackLayout>
 			</Grid>
 		</Grid>
