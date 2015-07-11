@@ -16,50 +16,51 @@
 		<Grid>
 			<Grid.RowDefinitions>
 				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="120"/>
 				<RowDefinition Height="*"/>
 				<RowDefinition Height="Auto"/>
 			</Grid.RowDefinitions>
 
 			<Label Text="Treasure Hunter" TextColor="White" FontSize="24" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
 
-			<Grid Grid.Row="1" Padding="40,20,40,10">
+			<Grid Grid.Row="1" Padding="20,40,20,10">
 				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
 					<ColumnDefinition Width="*"/>
 					<ColumnDefinition Width="*"/>
 				</Grid.ColumnDefinitions>
 				<Grid.RowDefinitions>
 					<RowDefinition Height="*"/>
 					<RowDefinition Height="*"/>
-					<RowDefinition Height="*"/>
-					<RowDefinition Height="*"/>
-					<RowDefinition Height="*"/>
 				</Grid.RowDefinitions>
 
-				<Frame Grid.Row="0" Grid.Column="0" Padding="0" BackgroundColor="{Binding BeaconsStatus[0], Converter={StaticResource colorStatusConvert}}"/>
-				<Frame Grid.Row="0" Grid.Column="1" Padding="0" BackgroundColor="{Binding BeaconsStatus[1], Converter={StaticResource colorStatusConvert}}"/>
-				<Frame Grid.Row="1" Grid.Column="0" Padding="0" BackgroundColor="{Binding BeaconsStatus[2], Converter={StaticResource colorStatusConvert}}"/>
-				<Frame Grid.Row="1" Grid.Column="1" Padding="0" BackgroundColor="{Binding BeaconsStatus[3], Converter={StaticResource colorStatusConvert}}"/>
-				<Frame Grid.Row="2" Grid.Column="0" Padding="0" BackgroundColor="{Binding BeaconsStatus[4], Converter={StaticResource colorStatusConvert}}"/>
-				<Frame Grid.Row="2" Grid.Column="1" Padding="0" BackgroundColor="{Binding BeaconsStatus[5], Converter={StaticResource colorStatusConvert}}"/>
-				<Frame Grid.Row="3" Grid.Column="0" Padding="0" BackgroundColor="{Binding BeaconsStatus[6], Converter={StaticResource colorStatusConvert}}"/>
-				<Frame Grid.Row="3" Grid.Column="1" Padding="0" BackgroundColor="{Binding BeaconsStatus[7], Converter={StaticResource colorStatusConvert}}"/>
-				<Frame Grid.Row="4" Grid.Column="0" Padding="0" BackgroundColor="{Binding BeaconsStatus[8], Converter={StaticResource colorStatusConvert}}"/>
-				<Frame Grid.Row="4" Grid.Column="1" Padding="0" BackgroundColor="{Binding BeaconsStatus[9], Converter={StaticResource colorStatusConvert}}"/>
+				<Frame Grid.Column="0" Grid.Row="0" Padding="0" BackgroundColor="{Binding BeaconsStatus[0], Converter={StaticResource colorStatusConvert}}"/>
+				<Frame Grid.Column="0" Grid.Row="1" Padding="0" BackgroundColor="{Binding BeaconsStatus[1], Converter={StaticResource colorStatusConvert}}"/>
+				<Frame Grid.Column="1" Grid.Row="0" Padding="0" BackgroundColor="{Binding BeaconsStatus[2], Converter={StaticResource colorStatusConvert}}"/>
+				<Frame Grid.Column="1" Grid.Row="1" Padding="0" BackgroundColor="{Binding BeaconsStatus[3], Converter={StaticResource colorStatusConvert}}"/>
+				<Frame Grid.Column="2" Grid.Row="0" Padding="0" BackgroundColor="{Binding BeaconsStatus[4], Converter={StaticResource colorStatusConvert}}"/>
+				<Frame Grid.Column="2" Grid.Row="1" Padding="0" BackgroundColor="{Binding BeaconsStatus[5], Converter={StaticResource colorStatusConvert}}"/>
+				<Frame Grid.Column="3" Grid.Row="0" Padding="0" BackgroundColor="{Binding BeaconsStatus[6], Converter={StaticResource colorStatusConvert}}"/>
+				<Frame Grid.Column="3" Grid.Row="1" Padding="0" BackgroundColor="{Binding BeaconsStatus[7], Converter={StaticResource colorStatusConvert}}"/>
+				<Frame Grid.Column="4" Grid.Row="0" Padding="0" BackgroundColor="{Binding BeaconsStatus[8], Converter={StaticResource colorStatusConvert}}"/>
+				<Frame Grid.Column="4" Grid.Row="1" Padding="0" BackgroundColor="{Binding BeaconsStatus[9], Converter={StaticResource colorStatusConvert}}"/>
 			</Grid>
 
-			<Grid Grid.Row="2">
+			<StackLayout Orientation="Vertical" Grid.Row="2">
+				<Label Text="{Binding Timer}" TextColor="White" FontSize="48" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+				<Label Text="{Binding Found, StringFormat='You found {0} chests'}" TextColor="White" FontSize="18" HorizontalOptions="CenterAndExpand" VerticalOptions="Start"/>
+				<Label Text="{Binding Status}" TextColor="White" FontSize="16" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+			</StackLayout>
+
+			<Grid Grid.Row="3" Padding="0,60,0,0">
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="*"/>
 					<ColumnDefinition Width="*"/>
 				</Grid.ColumnDefinitions>
-				<StackLayout Orientation="Vertical">
-					<Label Text="{Binding Timer}" TextColor="White" FontSize="24" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
-					<Label Text="{Binding Found}" TextColor="White" FontSize="14" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
-				</StackLayout>
-				<StackLayout Grid.Column="1" Orientation="Vertical">
-					<Button Text="Search" TextColor="White" Command="{Binding StartCommand}"/>
-					<Button Text="Yo, Break" TextColor="White" Command="{Binding StopCommand}"/>
-				</StackLayout>
+				<Button Grid.Column="0" Text="Search" TextColor="White" Command="{Binding StartCommand}"/>
+				<Button Grid.Column="1" Text="Yo, Break" TextColor="White" Command="{Binding StopCommand}"/>
 			</Grid>
 		</Grid>
 	</ContentPage.Content>

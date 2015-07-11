@@ -78,10 +78,16 @@ namespace BeaconTest
 			}
 		}
 
-		public string Found
+		public int Found
 		{
-			get { return string.Format("Found {0} chests", _beaconsStatus.Count(b => b.Visited)); }
+			get { return _beaconsStatus.Count(b => b.Visited); }
 		}
+
+		public string Status
+		{
+			get { return string.Format("2 pirates around, your position is 1"); }
+		}
+
 
 
 		public bool Started
