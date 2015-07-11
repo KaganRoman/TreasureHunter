@@ -4,7 +4,7 @@
 			x:Class="BeaconTest.MainPage"
 			xmlns:local="clr-namespace:BeaconTest;assembly=BeaconTest"
 			BackgroundColor="#E6A93D"
-			Padding="10,22,10,10">
+			Padding="10,28,10,10">
 
 	<ContentPage.Resources>
 		<ResourceDictionary>
@@ -21,7 +21,10 @@
 				<RowDefinition Height="Auto"/>
 			</Grid.RowDefinitions>
 
-			<Label Text="Treasure Hunter" TextColor="White" FontSize="24" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+			<StackLayout Orientation="Vertical">
+				<Label Text="Treasure Hunter" TextColor="White" FontSize="24" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+				<Image Source="pirate.png" HeightRequest="128"/>
+			</StackLayout>
 
 			<Grid Grid.Row="1" Padding="20,40,20,10">
 				<Grid.ColumnDefinitions>
