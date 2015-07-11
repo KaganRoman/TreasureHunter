@@ -42,7 +42,7 @@ namespace BeaconTest.iOS
 					}
 					list.Add (bStatus);
 				}
-				BeaconsUpdated (this, list);
+				InvokeOnMainThread(() => BeaconsUpdated (this, list));
 			}
 		}
 	}
