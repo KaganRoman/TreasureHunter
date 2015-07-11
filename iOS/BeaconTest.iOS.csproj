@@ -125,6 +125,7 @@
     <BundleResource Include="Sounds\tada.aif" />
     <BundleResource Include="Sounds\coin.wav" />
     <BundleResource Include="pirate.png" />
+    <BundleResource Include="Sounds\shame.wav" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />

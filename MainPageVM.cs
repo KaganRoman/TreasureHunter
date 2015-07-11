@@ -103,6 +103,8 @@ namespace BeaconTest
 
 		private List<BeaconStatus> UpdateStatus(IEnumerable<BeaconStatus> updates)
 		{
+			if (!Started)
+				return _beaconsStatus;
 			var added = false;
 			var l = new List<BeaconStatus> (_beaconsStatus);
 			foreach (var update in updates) {
@@ -168,6 +170,9 @@ namespace BeaconTest
 				while (!cancel.IsCancellationRequested) {
 					await Task.Delay (1000, cancel.Token);
 					Timer = string.Format("{0:00}:{1:00}", st.ElapsedMilliseconds/60000, (st.ElapsedMilliseconds/1000)%60);
+
+					if((st.ElapsedMilliseconds/1000)%30 == 0)
+						_sound.PlayMp3File ("Sounds/shame.wav");	
 				}
 			}
 			catch {
