@@ -17,6 +17,7 @@ module.exports = function (grunt) {
             folders: {
                 files: {
                     'wwwroot/bower_components/ng-grid': 'bower_components/ng-grid',
+                    'wwwroot/bower_components/angular-signalr-hub': 'bower_components/angular-signalr-hub',
                 }
             }
         }

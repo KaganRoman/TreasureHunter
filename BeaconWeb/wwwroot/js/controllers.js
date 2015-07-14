@@ -7,13 +7,14 @@
 /**
  * MainCtrl - controller
  */
-function MainCtrl() {
+function MainCtrl($scope, $http, $interval, Hub) {
 
     this.userName = 'Roman Kagan';
     this.helloText = 'Welcome in Treasure Hunter';
     this.descriptionText = 'Here we will watch for the pirates !';
 
     var scope = this;
+    this.users = [];
 
     this.usersGridOptions = {
         data: 'main.users',
@@ -30,6 +31,18 @@ function MainCtrl() {
         { field: 'LastSeen', displayName: 'LastSeen' },
         ],
     }
+
+    var hub = new Hub('beaconHub', {
+        methods: ['updateUsers'],
+        listeners: {
+            'updateServer': function (name, message) {
+            },
+        }
+    });
+
+    $interval(function() {
+        hub.updateUsers("update", "users");
+    }, 5000);
 };
 
 
