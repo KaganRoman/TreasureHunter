@@ -10,38 +10,18 @@ module.exports = function (grunt) {
 
     // configure plugins
     grunt.initConfig({
-        uglify: {
-            my_target: {
-                files: { 'wwwroot/app.js': ['Scripts/app.js', 'Scripts/**/*.js'] }
-            }
-        },
-
-        watch: {
-            scripts: {
-                files: ['Scripts/**/*.js'],
-                tasks: ['uglify']
-            }
-        },
-
         bowercopy: {
             options: {
                 srcPrefix: 'bower_components',
             },
-            scripts: {
-                options: {
-                    destPrefix: 'wwwroot/bower_components'
-                },
+            folders: {
                 files: {
-                    "ace-builds/src-min-noconflict/ace.js": "ace-builds/src-min-noconflict/ace.js",
-                    "angular-ui-ace/ui-ace.js": "angular-ui-ace/ui-ace.js",
-                    "angular-signalr-hub/signalr-hub.min.js": "angular-signalr-hub/signalr-hub.min.js",
-                    "jquery/jquery.min.js": "jquery/dist/jquery.min.js",
+                    'wwwroot/bower_components/ng-grid': 'bower_components/ng-grid',
                 }
             }
         }
     });
 
     // define tasks
-    grunt.registerTask('default', ['uglify', 'watch']);
     grunt.registerTask('bower', ['bowercopy']);
 };
