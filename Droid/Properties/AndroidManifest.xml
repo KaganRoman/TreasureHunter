@@ -1,6 +1,79 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.rumblenews">
-	<uses-sdk android:minSdkVersion="15" />
-	<application android:label="BeaconTest">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.rumblenews.beackontest">
+	<uses-sdk android:minSdkVersion="18" android:targetSdkVersion="21" />
+	<application android:label="TreasureHunter">
 	</application>
+
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	// For purposes of making power-efficient data decisions
+
+	<uses-permission android:name="android.permission.INTERNET" />
+	// To connect you to your ROXIMITY Dashboard
+
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	// To get a precise location of your devices and determine nearby beacons
+
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	// For beacon scanning
+
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+	// Also for beacon scanning
+
+	<uses-permission android:name="android.permission.GET_TASKS" />
+	// To determine if your application is in the foreground, and if not, go into power saving mode
+
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	// To begin scanning for beacons in power saving mode after a device restart
+
+
+	<!-- GCM Permissions -->
+	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<permission android:name="com.roximity.locator.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+	<uses-permission android:name="com.roximity.locator.permission.C2D_MESSAGE" />
+	<!-- end GCM Permissions -->
+
+    <!--  Required ROXIMITY Services, Activities, and Receivers -->
+    
+    <service
+        android:name="com.roximity.sdk.ROXIMITYService"
+        android:label="ROXIMITYService" >
+    </service>
+
+    <activity
+        android:name="com.roximity.sdk.messages.ROXIMITYIntentLauncher"
+        android:label="URL Launcher" >
+    </activity>
+
+    <receiver android:name="com.roximity.system.clapis.GeofenceReceiver"
+        android:exported="false">
+        <intent-filter >
+            <action android:name="com.roximity.sdk.ACTION_RECEIVE_GEOFENCE"/>
+        </intent-filter>
+    </receiver>
+
+    <receiver android:name="com.roximity.system.BootReceiver">
+        <intent-filter>
+            <action android:name="android.intent.action.BOOT_COMPLETED" />
+        </intent-filter>
+    </receiver>
+    
+    <!-- End Required ROXIMITY Services, Activities, and Receivers -->
+
+    <!-- GCM Receiver -->
+
+    <receiver android:name="com.roximity.system.GCMReceiver"
+        android:permission="com.google.android.c2dm.permission.SEND" >
+        <intent-filter>
+            <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+            <category android:name="com.example.gcm" />
+        </intent-filter>
+    </receiver>
+
+    <!-- End GCM Receiver -->
+
+    <meta-data android:name="ROXIMITY_APPLICATION_ID" android:value="7ca3ad0cf7904952a675a645a00b9c51" />
+
 </manifest>
