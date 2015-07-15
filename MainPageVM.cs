@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Diagnostics;
 using System.Linq;
+using Microsoft.AspNet.SignalR.Client;
+using Newtonsoft.Json;
 
 namespace BeaconTest
 {
@@ -30,19 +32,31 @@ namespace BeaconTest
 
 		private IAudio _sound;
 
+		private string _userId;
+
+		private string _positionStatus;
+
+		private IServer _server;
+
 		public MainPageVM ()
 		{
 			_sound = DependencyService.Get<IAudio> ();
+			_server = DependencyService.Get<IServer> ();
 
 			var beaconReceiver = DependencyService.Get<IBeaconReceiver> ();
-			beaconReceiver.BeaconsUpdated += (sender, e) => BeaconsStatus = UpdateStatus(e);
+			_userId = beaconReceiver.UserId;
 
+			beaconReceiver.BeaconsUpdated += (sender, e) => BeaconsStatus = UpdateStatus(e);
+				
 			_beaconsStatus = new List<BeaconStatus> ();
 			for (int i = 0; i < 10; ++i)
 				_beaconsStatus.Add (new BeaconStatus { Name = string.Format("T{0}", i)});
 
 			_timer = "";
+			_positionStatus = "";
 
+			_server.PositionsUpdated += UpdateUsersFromServer;
+			UpdateServer ();
 		}
 
 		public List<BeaconStatus> BeaconsStatus 
@@ -85,7 +99,11 @@ namespace BeaconTest
 
 		public string Status
 		{
-			get { return string.Format("2 pirates around, your position is 1"); }
+			get { return _positionStatus; }
+			set {
+				_positionStatus = value;
+				OnPropertyChanged ();
+			}
 		}
 
 
@@ -126,6 +144,7 @@ namespace BeaconTest
 					_sound.PlayMp3File ("Sounds/coin.wav");	
 				}
 			} 
+			UpdateServer ();
 			return l;
 		}
 
@@ -147,6 +166,7 @@ namespace BeaconTest
 			_timerCancel = new CancellationTokenSource ();
 			ResetBeacons ();
 			Task.Factory.StartNew (StartTimer);
+			UpdateServer ();
 		}
 
 		private void Stop(bool playSound = true)
@@ -158,6 +178,7 @@ namespace BeaconTest
 			if (_timerCancel != null)
 				_timerCancel.Cancel ();
 			_timerCancel = null;
+			UpdateServer ();
 		}
 
 		private async Task StartTimer()
@@ -173,6 +194,8 @@ namespace BeaconTest
 
 					if((st.ElapsedMilliseconds/1000)%30 == 0)
 						_sound.PlayMp3File ("Sounds/shame.wav");	
+					if((st.ElapsedMilliseconds/1000)%5 == 0)
+						UpdateServer();
 				}
 			}
 			catch {
@@ -183,6 +206,47 @@ namespace BeaconTest
 		{
 			if (PropertyChanged != null) {
 				PropertyChanged(this, new PropertyChangedEventArgs(name));
+			}
+		}
+
+		class ServerStatus
+		{
+			public string Name { get; set; }
+			public string Status { get; set; }
+			public string UserId { get; set; }
+			public string Timer { get; set; }
+			public List<BeaconStatus> Beacons { get; set; }
+		}
+
+		private void UpdateServer()
+		{
+			var message = new ServerStatus 
+			{ 
+				UserId = _userId, 
+				Status = _started ? "Running" : "Waiting", 
+				Beacons = _beaconsStatus ,
+				Timer = Timer,
+				Name = "Roman"
+			};
+
+			_server.UpdateServer (message);
+		}
+
+		private void UpdateUsersFromServer(object sender, Dictionary<string, int> users)
+		{
+			try
+			{
+				var usersCount = users.Count;
+				var userPos = -1;
+				if(users.ContainsKey(_userId))
+					userPos = users[_userId];
+
+				Device.BeginInvokeOnMainThread(() =>
+					{
+						_positionStatus = string.Format("{0} pirates around, your position is {1}", usersCount, userPos);
+					});
+			}
+			catch(Exception e) {
 			}
 		}
 	}

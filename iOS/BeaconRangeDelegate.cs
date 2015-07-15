@@ -18,6 +18,8 @@ namespace BeaconTest.iOS
 
 		public event EventHandler<IEnumerable<BeaconStatus>> BeaconsUpdated;
 
+		public string UserId { get; set; }
+
 		#endregion
 			
 		public override void DidUpdateBeaconRanges (NSObject[] rangedBeacons)

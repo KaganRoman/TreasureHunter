@@ -8,6 +8,7 @@ using UIKit;
 using Beacoun.Touch;
 using CoreLocation;
 using Xamarin.Forms;
+using Microsoft.AspNet.SignalR.Client;
 
 namespace BeaconTest.iOS
 {
@@ -23,18 +24,19 @@ namespace BeaconTest.iOS
 			Xamarin.Calabash.Start();
 			#endif
 
-			LoadApplication (new App ());
-
-			var res = base.FinishedLaunching (app, options);
-
-			var r = new CLLocationManager ();
-			r.RequestAlwaysAuthorization ();
-
 			var rangeDelegate = DependencyService.Get<IBeaconReceiver> () as BeaconRangeDelegate;
+			rangeDelegate.UserId = AdSupport.ASIdentifierManager.SharedManager.AdvertisingIdentifier.AsString ();
 
 			var appId = "7ca3ad0cf7904952a675a645a00b9c51";
 			ROXIMITYEngine.StartWithLaunchOptions (options, null, appId, new BeaconServiceTouch());
 			ROXIMITYEngine.SetBeaconRangeDelegate(rangeDelegate, ROXBeaconRangeUpdateInterval.Fastest);
+
+			var r = new CLLocationManager ();
+			r.RequestAlwaysAuthorization ();
+
+			LoadApplication (new App ());
+
+			var res = base.FinishedLaunching (app, options);
 
 			return res;
 		}
