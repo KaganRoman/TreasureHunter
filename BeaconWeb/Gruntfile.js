@@ -18,6 +18,7 @@ module.exports = function (grunt) {
                 files: {
                     'wwwroot/bower_components/ng-grid': 'bower_components/ng-grid',
                     'wwwroot/bower_components/angular-signalr-hub': 'bower_components/angular-signalr-hub',
+                    'wwwroot/bower_components/underscore' : 'bower_components/underscore'
                 }
             }
         }

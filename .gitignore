@@ -40,3 +40,4 @@ Thumbs.db
 *.dotCover
 BeaconWeb/node_modules/
 BeaconWeb/bower_components/
+BeaconWeb/wwwroot/bower_components/

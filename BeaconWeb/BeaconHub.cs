@@ -7,17 +7,17 @@ using Microsoft.AspNet.SignalR.Hubs;
 
 namespace BeaconWeb
 {
-	[HubName("beaconHub")]
+	[HubName("beaconHub2")]
 	public class BeaconHub : Hub
 	{
-		public void updateUsers(string name, string message)
+		public void updateUsersPosition(Dictionary<string, int> message)
 		{
-			Clients.All.updateUsers(name, message);
+			Clients.All.updateUsersPosition(message);
 		}
 
-		public void updateServer(string name, string message)
+		public void updateServer(object message)
 		{
-			Clients.All.updateServer(name, message);
+			Clients.All.updateServer(message);
 		}
 	}
 }
