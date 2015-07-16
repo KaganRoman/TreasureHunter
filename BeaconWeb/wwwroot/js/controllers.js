@@ -15,6 +15,7 @@ function MainCtrl($scope, $http, $interval, Hub) {
 
     var scope = this;
     this.users = [];
+    this.beacons = [];
 
     var dateTemplate = '<div class="timeCell"><span>{{COL_FIELD | date:"HH:mm:ss"}}</span></div>';
 
@@ -34,6 +35,20 @@ function MainCtrl($scope, $http, $interval, Hub) {
         { field: 'Status', displayName: 'Status' },
         { field: 'Timer', displayName: 'Time' },
         { field: 'LastSeen', displayName: 'LastSeen', cellTemplate: dateTemplate },
+        ],
+    }
+
+    this.beaconsGridOptions = {
+            data: 'main.beacons',
+            enableRowSelection: false,
+            multiSelect: false,
+            enableColumnResize: true,
+            showFilter: false,
+            showGroupPanel: false,
+            columnDefs: [
+            { field: 'Name', displayName: 'Name' },
+            { field: 'Visited', displayName: '# Found' },
+            { field: 'Visible', displayName: 'Visible Now' },
         ],
     }
 
@@ -68,6 +83,21 @@ function MainCtrl($scope, $http, $interval, Hub) {
                 _.each(users, function(u) {
                     u.Position = sortedUsers.length - _.indexOf(sortedUsers, u);
                 });
+
+                var beacons = [];
+                _.each(users, function (u) {
+                    if (!u.Beacons) return;
+                    _.each(u.Beacons, function(b) {
+                        var beacon = _.find(beacons, function (i) { return i.Name === b.Name });
+                        if (beacon == null) {
+                            beacon = { Name: b.Name, Visited: 0, Visible: 0 };
+                            beacons.push(beacon);
+                        }
+                        if (b.Visited === true) beacon.Visited++;
+                        if (b.ProximityString) beacon.Visible++;
+                    });
+                });
+                scope.beacons = beacons;
             },
         }
     });
