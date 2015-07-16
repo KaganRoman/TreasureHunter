@@ -33,6 +33,7 @@ namespace BeaconTest
 		private IAudio _sound;
 
 		private string _userId;
+		private string _name;
 
 		private string _positionStatus;
 
@@ -52,8 +53,9 @@ namespace BeaconTest
 			for (int i = 0; i < 10; ++i)
 				_beaconsStatus.Add (new BeaconStatus { Name = string.Format("T{0}", i)});
 
-			_timer = "";
+			_timer = "00:00";
 			_positionStatus = "";
+			_name = "";
 
 			_server.PositionsUpdated += UpdateUsersFromServer;
 			UpdateServer ();
@@ -72,7 +74,7 @@ namespace BeaconTest
 		public Xamarin.Forms.Command StartCommand
 		{
 			get {
-				return _startCommand = _startCommand ?? new Command (Start, () => !Started);
+				return _startCommand = _startCommand ?? new Command (Start, () => !string.IsNullOrEmpty(Name) && !Started);
 			}
 		}
 
@@ -106,6 +108,15 @@ namespace BeaconTest
 			}
 		}
 
+		public string Name
+		{
+			get { return _name; }
+			set {
+				_name = value;
+				StartCommand.ChangeCanExecute ();
+				OnPropertyChanged ();
+			}
+		}
 
 
 		public bool Started
@@ -226,7 +237,7 @@ namespace BeaconTest
 				Status = _started ? "Running" : "Waiting", 
 				Beacons = _beaconsStatus ,
 				Timer = Timer,
-				Name = "Roman"
+				Name = Name
 			};
 
 			_server.UpdateServer (message);
@@ -236,14 +247,14 @@ namespace BeaconTest
 		{
 			try
 			{
-				var usersCount = users.Count;
+				var usersCount = users.Count - 1;
 				var userPos = -1;
 				if(users.ContainsKey(_userId))
 					userPos = users[_userId];
 
 				Device.BeginInvokeOnMainThread(() =>
 					{
-						_positionStatus = string.Format("{0} pirates around, your position is {1}", usersCount, userPos);
+						Status = string.Format("{0} pirates around, your position is {1}", usersCount, userPos);
 					});
 			}
 			catch(Exception e) {

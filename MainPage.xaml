@@ -55,6 +55,7 @@
 				<Label Text="{Binding Timer}" TextColor="White" FontSize="48" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
 				<Label Text="{Binding Found, StringFormat='You found {0} chests'}" TextColor="White" FontSize="18" HorizontalOptions="CenterAndExpand" VerticalOptions="Start"/>
 				<Label Text="{Binding Status}" TextColor="White" FontSize="16" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+				<Entry Text="{Binding Name}" WidthRequest="100" Placeholder="Enter your name to start"/>
 			</StackLayout>
 
 			<Grid Grid.Row="3" Padding="0,60,0,0">
