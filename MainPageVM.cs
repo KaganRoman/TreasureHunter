@@ -8,8 +8,6 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Diagnostics;
 using System.Linq;
-using Microsoft.AspNet.SignalR.Client;
-using Newtonsoft.Json;
 
 namespace BeaconTest
 {
