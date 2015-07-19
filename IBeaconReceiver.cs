@@ -16,6 +16,8 @@ namespace BeaconTest
 	public interface IBeaconReceiver
 	{
 		event EventHandler<IEnumerable<BeaconStatus>> BeaconsUpdated;
+
+		string UserId { get; }
 	}
 }
 
