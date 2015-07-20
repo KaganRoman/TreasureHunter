@@ -160,6 +160,7 @@
       <Link>Server.cs</Link>
     </Compile>
     <Compile Include="R.cs" />
+    <Compile Include="BeaconBrodcast.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -188,6 +189,14 @@
     </XamarinComponentReference>
     <XamarinComponentReference Include="signalr">
       <Version>2.1.2.2</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamandroidsupportv7appcompat">
+      <Version>22.2.0.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamandroidsupportv4-18">
+      <Version>22.2.0.0</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>

@@ -16,7 +16,7 @@ namespace BeaconTest.Droid
 
 		public string UserId {
 			get {
-				throw new NotImplementedException ();
+				return "XXX";
 			}
 		}
 
