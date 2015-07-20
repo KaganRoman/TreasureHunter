@@ -174,7 +174,7 @@ namespace BeaconTest
 				_timerCancel.Cancel ();
 			_timerCancel = new CancellationTokenSource ();
 			ResetBeacons ();
-			Task.Factory.StartNew (StartTimer);
+			Task.Factory.StartNew (async () => await StartTimer());
 			UpdateServer ();
 		}
 
