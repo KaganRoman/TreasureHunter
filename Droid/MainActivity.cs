@@ -22,6 +22,8 @@ namespace BeaconTest.Droid
 		{
 			base.OnCreate (bundle);
 
+			var c = new Com.Loopj.Android.Http.AsyncHttpClient ();
+
 			ROXIMITYEngine.StartEngineWithOptions(this.ApplicationContext, Resource.Drawable.notification_template_icon_bg, null, this, null);
 			_receiver = new BeaconBrodcast ();
 			var intentFilter = new IntentFilter ();

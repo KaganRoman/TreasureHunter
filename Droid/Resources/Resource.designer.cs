@@ -1999,6 +1999,12 @@ namespace BeaconTest.Droid
 			// aapt resource value: 0x7f01002c
 			public const int mediaRouteSettingsDrawable = 2130772012;
 			
+			// aapt resource value: 0x7f0100f8
+			public const int metaButtonBarButtonStyle = 2130772216;
+			
+			// aapt resource value: 0x7f0100f7
+			public const int metaButtonBarStyle = 2130772215;
+			
 			// aapt resource value: 0x7f010058
 			public const int middleBarArrowSize = 2130772056;
 			
@@ -2322,29 +2328,29 @@ namespace BeaconTest.Droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f06004a
-			public const int abc_background_cache_hint_selector_material_dark = 2131099722;
-			
 			// aapt resource value: 0x7f06004b
-			public const int abc_background_cache_hint_selector_material_light = 2131099723;
+			public const int abc_background_cache_hint_selector_material_dark = 2131099723;
+			
+			// aapt resource value: 0x7f06004c
+			public const int abc_background_cache_hint_selector_material_light = 2131099724;
 			
 			// aapt resource value: 0x7f060017
 			public const int abc_input_method_navigation_guard = 2131099671;
 			
-			// aapt resource value: 0x7f06004c
-			public const int abc_primary_text_disable_only_material_dark = 2131099724;
-			
 			// aapt resource value: 0x7f06004d
-			public const int abc_primary_text_disable_only_material_light = 2131099725;
+			public const int abc_primary_text_disable_only_material_dark = 2131099725;
 			
 			// aapt resource value: 0x7f06004e
-			public const int abc_primary_text_material_dark = 2131099726;
+			public const int abc_primary_text_disable_only_material_light = 2131099726;
 			
 			// aapt resource value: 0x7f06004f
-			public const int abc_primary_text_material_light = 2131099727;
+			public const int abc_primary_text_material_dark = 2131099727;
 			
 			// aapt resource value: 0x7f060050
-			public const int abc_search_url_text = 2131099728;
+			public const int abc_primary_text_material_light = 2131099728;
+			
+			// aapt resource value: 0x7f060051
+			public const int abc_search_url_text = 2131099729;
 			
 			// aapt resource value: 0x7f060018
 			public const int abc_search_url_text_normal = 2131099672;
@@ -2355,11 +2361,11 @@ namespace BeaconTest.Droid
 			// aapt resource value: 0x7f06001a
 			public const int abc_search_url_text_selected = 2131099674;
 			
-			// aapt resource value: 0x7f060051
-			public const int abc_secondary_text_material_dark = 2131099729;
-			
 			// aapt resource value: 0x7f060052
-			public const int abc_secondary_text_material_light = 2131099730;
+			public const int abc_secondary_text_material_dark = 2131099730;
+			
+			// aapt resource value: 0x7f060053
+			public const int abc_secondary_text_material_light = 2131099731;
 			
 			// aapt resource value: 0x7f06001b
 			public const int accent_material_dark = 2131099675;
@@ -2378,6 +2384,9 @@ namespace BeaconTest.Droid
 			
 			// aapt resource value: 0x7f060020
 			public const int background_material_light = 2131099680;
+			
+			// aapt resource value: 0x7f06004a
+			public const int black_overlay = 2131099722;
 			
 			// aapt resource value: 0x7f060021
 			public const int bright_foreground_disabled_material_dark = 2131099681;
@@ -2433,11 +2442,11 @@ namespace BeaconTest.Droid
 			// aapt resource value: 0x7f060012
 			public const int common_signin_btn_light_text_pressed = 2131099666;
 			
-			// aapt resource value: 0x7f060053
-			public const int common_signin_btn_text_dark = 2131099731;
-			
 			// aapt resource value: 0x7f060054
-			public const int common_signin_btn_text_light = 2131099732;
+			public const int common_signin_btn_text_dark = 2131099732;
+			
+			// aapt resource value: 0x7f060055
+			public const int common_signin_btn_text_light = 2131099733;
 			
 			// aapt resource value: 0x7f060029
 			public const int dim_foreground_disabled_material_dark = 2131099689;
@@ -2532,11 +2541,11 @@ namespace BeaconTest.Droid
 			// aapt resource value: 0x7f060047
 			public const int switch_thumb_disabled_material_light = 2131099719;
 			
-			// aapt resource value: 0x7f060055
-			public const int switch_thumb_material_dark = 2131099733;
-			
 			// aapt resource value: 0x7f060056
-			public const int switch_thumb_material_light = 2131099734;
+			public const int switch_thumb_material_dark = 2131099734;
+			
+			// aapt resource value: 0x7f060057
+			public const int switch_thumb_material_light = 2131099735;
 			
 			// aapt resource value: 0x7f060048
 			public const int switch_thumb_normal_material_dark = 2131099720;
@@ -2583,11 +2592,11 @@ namespace BeaconTest.Droid
 			// aapt resource value: 0x7f06000c
 			public const int wallet_link_text_light = 2131099660;
 			
-			// aapt resource value: 0x7f060057
-			public const int wallet_primary_text_holo_light = 2131099735;
-			
 			// aapt resource value: 0x7f060058
-			public const int wallet_secondary_text_holo_dark = 2131099736;
+			public const int wallet_primary_text_holo_light = 2131099736;
+			
+			// aapt resource value: 0x7f060059
+			public const int wallet_secondary_text_holo_dark = 2131099737;
 			
 			static Color()
 			{
@@ -2781,6 +2790,12 @@ namespace BeaconTest.Droid
 			
 			// aapt resource value: 0x7f0b0006
 			public const int abc_text_size_title_material_toolbar = 2131427334;
+			
+			// aapt resource value: 0x7f0b0046
+			public const int activity_horizontal_margin = 2131427398;
+			
+			// aapt resource value: 0x7f0b0047
+			public const int activity_vertical_margin = 2131427399;
 			
 			// aapt resource value: 0x7f0b0009
 			public const int dialog_fixed_height_major = 2131427337;
@@ -3120,103 +3135,106 @@ namespace BeaconTest.Droid
 			public const int ic_cast_on_light = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int ic_media_pause = 2130837602;
+			public const int ic_launcher = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int ic_media_play = 2130837603;
+			public const int ic_media_pause = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int ic_media_route_disabled_mono_dark = 2130837604;
+			public const int ic_media_play = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int ic_media_route_off_mono_dark = 2130837605;
+			public const int ic_media_route_disabled_mono_dark = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int ic_media_route_on_0_mono_dark = 2130837606;
+			public const int ic_media_route_off_mono_dark = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int ic_media_route_on_1_mono_dark = 2130837607;
+			public const int ic_media_route_on_0_mono_dark = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int ic_media_route_on_2_mono_dark = 2130837608;
+			public const int ic_media_route_on_1_mono_dark = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int ic_media_route_on_mono_dark = 2130837609;
+			public const int ic_media_route_on_2_mono_dark = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int ic_pause_dark = 2130837610;
+			public const int ic_media_route_on_mono_dark = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int ic_pause_light = 2130837611;
+			public const int ic_pause_dark = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int ic_play_dark = 2130837612;
+			public const int ic_pause_light = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int ic_play_light = 2130837613;
+			public const int ic_play_dark = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int ic_plusone_medium_off_client = 2130837614;
+			public const int ic_play_light = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int ic_plusone_small_off_client = 2130837615;
+			public const int ic_plusone_medium_off_client = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int ic_plusone_standard_off_client = 2130837616;
+			public const int ic_plusone_small_off_client = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int ic_plusone_tall_off_client = 2130837617;
+			public const int ic_plusone_standard_off_client = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int ic_setting_dark = 2130837618;
+			public const int ic_plusone_tall_off_client = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public const int ic_setting_light = 2130837619;
+			public const int ic_setting_dark = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int icon = 2130837620;
+			public const int ic_setting_light = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public const int mr_ic_audio_vol = 2130837621;
+			public const int icon = 2130837621;
 			
 			// aapt resource value: 0x7f020076
-			public const int mr_ic_media_route_connecting_mono_dark = 2130837622;
+			public const int mr_ic_audio_vol = 2130837622;
 			
 			// aapt resource value: 0x7f020077
-			public const int mr_ic_media_route_connecting_mono_light = 2130837623;
+			public const int mr_ic_media_route_connecting_mono_dark = 2130837623;
 			
 			// aapt resource value: 0x7f020078
-			public const int mr_ic_media_route_mono_dark = 2130837624;
+			public const int mr_ic_media_route_connecting_mono_light = 2130837624;
 			
 			// aapt resource value: 0x7f020079
-			public const int mr_ic_media_route_mono_light = 2130837625;
+			public const int mr_ic_media_route_mono_dark = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
-			public const int mr_ic_pause_dark = 2130837626;
+			public const int mr_ic_media_route_mono_light = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public const int mr_ic_pause_light = 2130837627;
+			public const int mr_ic_pause_dark = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
-			public const int mr_ic_play_dark = 2130837628;
+			public const int mr_ic_pause_light = 2130837628;
 			
 			// aapt resource value: 0x7f02007d
-			public const int mr_ic_play_light = 2130837629;
+			public const int mr_ic_play_dark = 2130837629;
 			
 			// aapt resource value: 0x7f02007e
-			public const int mr_ic_settings_dark = 2130837630;
+			public const int mr_ic_play_light = 2130837630;
 			
 			// aapt resource value: 0x7f02007f
-			public const int mr_ic_settings_light = 2130837631;
-			
-			// aapt resource value: 0x7f020082
-			public const int notification_template_icon_bg = 2130837634;
+			public const int mr_ic_settings_dark = 2130837631;
 			
 			// aapt resource value: 0x7f020080
-			public const int powered_by_google_dark = 2130837632;
+			public const int mr_ic_settings_light = 2130837632;
+			
+			// aapt resource value: 0x7f020083
+			public const int notification_template_icon_bg = 2130837635;
 			
 			// aapt resource value: 0x7f020081
-			public const int powered_by_google_light = 2130837633;
+			public const int powered_by_google_dark = 2130837633;
+			
+			// aapt resource value: 0x7f020082
+			public const int powered_by_google_light = 2130837634;
 			
 			static Drawable()
 			{
@@ -3231,8 +3249,8 @@ namespace BeaconTest.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f090075
-			public const int action0 = 2131296373;
+			// aapt resource value: 0x7f090078
+			public const int action0 = 2131296376;
 			
 			// aapt resource value: 0x7f090057
 			public const int action_bar = 2131296343;
@@ -3258,8 +3276,8 @@ namespace BeaconTest.Droid
 			// aapt resource value: 0x7f090058
 			public const int action_context_bar = 2131296344;
 			
-			// aapt resource value: 0x7f090079
-			public const int action_divider = 2131296377;
+			// aapt resource value: 0x7f09007c
+			public const int action_divider = 2131296380;
 			
 			// aapt resource value: 0x7f090003
 			public const int action_menu_divider = 2131296259;
@@ -3276,6 +3294,9 @@ namespace BeaconTest.Droid
 			// aapt resource value: 0x7f09003c
 			public const int action_mode_close_button = 2131296316;
 			
+			// aapt resource value: 0x7f090085
+			public const int action_settings = 2131296389;
+			
 			// aapt resource value: 0x7f09003d
 			public const int activity_chooser_view_content = 2131296317;
 			
@@ -3291,8 +3312,8 @@ namespace BeaconTest.Droid
 			// aapt resource value: 0x7f09002e
 			public const int always = 2131296302;
 			
-			// aapt resource value: 0x7f09006c
-			public const int art = 2131296364;
+			// aapt resource value: 0x7f09006f
+			public const int art = 2131296367;
 			
 			// aapt resource value: 0x7f09002b
 			public const int beginning = 2131296299;
@@ -3303,8 +3324,8 @@ namespace BeaconTest.Droid
 			// aapt resource value: 0x7f09004d
 			public const int buttonPanel = 2131296333;
 			
-			// aapt resource value: 0x7f090072
-			public const int buttons = 2131296370;
+			// aapt resource value: 0x7f090075
+			public const int buttons = 2131296373;
 			
 			// aapt resource value: 0x7f090010
 			public const int buyButton = 2131296272;
@@ -3315,8 +3336,8 @@ namespace BeaconTest.Droid
 			// aapt resource value: 0x7f090016
 			public const int buy_with_google = 2131296278;
 			
-			// aapt resource value: 0x7f090076
-			public const int cancel_action = 2131296374;
+			// aapt resource value: 0x7f090079
+			public const int cancel_action = 2131296377;
 			
 			// aapt resource value: 0x7f090000
 			public const int cast_notification_id = 2131296256;
@@ -3324,8 +3345,8 @@ namespace BeaconTest.Droid
 			// aapt resource value: 0x7f09004f
 			public const int checkbox = 2131296335;
 			
-			// aapt resource value: 0x7f09007c
-			public const int chronometer = 2131296380;
+			// aapt resource value: 0x7f09007f
+			public const int chronometer = 2131296383;
 			
 			// aapt resource value: 0x7f090018
 			public const int classic = 2131296280;
@@ -3348,8 +3369,8 @@ namespace BeaconTest.Droid
 			// aapt resource value: 0x7f090040
 			public const int default_activity_button = 2131296320;
 			
-			// aapt resource value: 0x7f09006b
-			public const int default_control_frame = 2131296363;
+			// aapt resource value: 0x7f09006e
+			public const int default_control_frame = 2131296366;
 			
 			// aapt resource value: 0x7f090033
 			public const int dialog = 2131296307;
@@ -3357,8 +3378,8 @@ namespace BeaconTest.Droid
 			// aapt resource value: 0x7f090025
 			public const int disableHome = 2131296293;
 			
-			// aapt resource value: 0x7f090073
-			public const int disconnect = 2131296371;
+			// aapt resource value: 0x7f090076
+			public const int disconnect = 2131296374;
 			
 			// aapt resource value: 0x7f090017
 			public const int donate_with_google = 2131296279;
@@ -3366,20 +3387,29 @@ namespace BeaconTest.Droid
 			// aapt resource value: 0x7f090034
 			public const int dropdown = 2131296308;
 			
+			// aapt resource value: 0x7f090068
+			public const int dummy_button = 2131296360;
+			
 			// aapt resource value: 0x7f090059
 			public const int edit_query = 2131296345;
 			
 			// aapt resource value: 0x7f09002c
 			public const int end = 2131296300;
 			
-			// aapt resource value: 0x7f090081
-			public const int end_padder = 2131296385;
+			// aapt resource value: 0x7f090084
+			public const int end_padder = 2131296388;
 			
 			// aapt resource value: 0x7f09003e
 			public const int expand_activities_button = 2131296318;
 			
 			// aapt resource value: 0x7f09004e
 			public const int expanded_menu = 2131296334;
+			
+			// aapt resource value: 0x7f090066
+			public const int fullscreen_content = 2131296358;
+			
+			// aapt resource value: 0x7f090067
+			public const int fullscreen_content_controls = 2131296359;
 			
 			// aapt resource value: 0x7f090019
 			public const int grayscale = 2131296281;
@@ -3408,14 +3438,14 @@ namespace BeaconTest.Droid
 			// aapt resource value: 0x7f09003f
 			public const int image = 2131296319;
 			
-			// aapt resource value: 0x7f090080
-			public const int info = 2131296384;
+			// aapt resource value: 0x7f090083
+			public const int info = 2131296387;
 			
-			// aapt resource value: 0x7f09007a
-			public const int line1 = 2131296378;
+			// aapt resource value: 0x7f09007d
+			public const int line1 = 2131296381;
 			
-			// aapt resource value: 0x7f09007e
-			public const int line3 = 2131296382;
+			// aapt resource value: 0x7f090081
+			public const int line3 = 2131296385;
 			
 			// aapt resource value: 0x7f090023
 			public const int listMode = 2131296291;
@@ -3426,20 +3456,20 @@ namespace BeaconTest.Droid
 			// aapt resource value: 0x7f090012
 			public const int match_parent = 2131296274;
 			
-			// aapt resource value: 0x7f090078
-			public const int media_actions = 2131296376;
+			// aapt resource value: 0x7f09007b
+			public const int media_actions = 2131296379;
 			
-			// aapt resource value: 0x7f09006a
-			public const int media_route_control_frame = 2131296362;
+			// aapt resource value: 0x7f09006d
+			public const int media_route_control_frame = 2131296365;
 			
-			// aapt resource value: 0x7f090066
-			public const int media_route_list = 2131296358;
+			// aapt resource value: 0x7f090069
+			public const int media_route_list = 2131296361;
 			
-			// aapt resource value: 0x7f090070
-			public const int media_route_volume_layout = 2131296368;
+			// aapt resource value: 0x7f090073
+			public const int media_route_volume_layout = 2131296371;
 			
-			// aapt resource value: 0x7f090071
-			public const int media_route_volume_slider = 2131296369;
+			// aapt resource value: 0x7f090074
+			public const int media_route_volume_slider = 2131296372;
 			
 			// aapt resource value: 0x7f09002d
 			public const int middle = 2131296301;
@@ -3462,8 +3492,8 @@ namespace BeaconTest.Droid
 			// aapt resource value: 0x7f090044
 			public const int parentPanel = 2131296324;
 			
-			// aapt resource value: 0x7f09006d
-			public const int play_pause = 2131296365;
+			// aapt resource value: 0x7f090070
+			public const int play_pause = 2131296368;
 			
 			// aapt resource value: 0x7f09000c
 			public const int production = 2131296268;
@@ -3477,8 +3507,8 @@ namespace BeaconTest.Droid
 			// aapt resource value: 0x7f090051
 			public const int radio = 2131296337;
 			
-			// aapt resource value: 0x7f090068
-			public const int route_name = 2131296360;
+			// aapt resource value: 0x7f09006b
+			public const int route_name = 2131296363;
 			
 			// aapt resource value: 0x7f09000d
 			public const int sandbox = 2131296269;
@@ -3528,8 +3558,8 @@ namespace BeaconTest.Droid
 			// aapt resource value: 0x7f090011
 			public const int selectionDetails = 2131296273;
 			
-			// aapt resource value: 0x7f090069
-			public const int settings = 2131296361;
+			// aapt resource value: 0x7f09006c
+			public const int settings = 2131296364;
 			
 			// aapt resource value: 0x7f090050
 			public const int shortcut = 2131296336;
@@ -3558,11 +3588,11 @@ namespace BeaconTest.Droid
 			// aapt resource value: 0x7f090039
 			public const int src_over = 2131296313;
 			
-			// aapt resource value: 0x7f090077
-			public const int status_bar_latest_event_content = 2131296375;
+			// aapt resource value: 0x7f09007a
+			public const int status_bar_latest_event_content = 2131296378;
 			
-			// aapt resource value: 0x7f090074
-			public const int stop = 2131296372;
+			// aapt resource value: 0x7f090077
+			public const int stop = 2131296375;
 			
 			// aapt resource value: 0x7f09000e
 			public const int strict_sandbox = 2131296270;
@@ -3570,8 +3600,8 @@ namespace BeaconTest.Droid
 			// aapt resource value: 0x7f090062
 			public const int submit_area = 2131296354;
 			
-			// aapt resource value: 0x7f09006f
-			public const int subtitle = 2131296367;
+			// aapt resource value: 0x7f090072
+			public const int subtitle = 2131296370;
 			
 			// aapt resource value: 0x7f090024
 			public const int tabMode = 2131296292;
@@ -3582,26 +3612,26 @@ namespace BeaconTest.Droid
 			// aapt resource value: 0x7f09000f
 			public const int test = 2131296271;
 			
-			// aapt resource value: 0x7f09007f
-			public const int text = 2131296383;
+			// aapt resource value: 0x7f090082
+			public const int text = 2131296386;
 			
-			// aapt resource value: 0x7f09007d
-			public const int text2 = 2131296381;
+			// aapt resource value: 0x7f090080
+			public const int text2 = 2131296384;
 			
 			// aapt resource value: 0x7f09004a
 			public const int textSpacerNoButtons = 2131296330;
 			
-			// aapt resource value: 0x7f09006e
-			public const int text_wrapper = 2131296366;
+			// aapt resource value: 0x7f090071
+			public const int text_wrapper = 2131296369;
 			
-			// aapt resource value: 0x7f09007b
-			public const int time = 2131296379;
+			// aapt resource value: 0x7f09007e
+			public const int time = 2131296382;
 			
 			// aapt resource value: 0x7f090043
 			public const int title = 2131296323;
 			
-			// aapt resource value: 0x7f090067
-			public const int title_bar = 2131296359;
+			// aapt resource value: 0x7f09006a
+			public const int title_bar = 2131296362;
 			
 			// aapt resource value: 0x7f090046
 			public const int title_template = 2131296326;
@@ -3741,49 +3771,52 @@ namespace BeaconTest.Droid
 			public const int abc_simple_dropdown_hint = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int mr_media_route_chooser_dialog = 2130903065;
+			public const int activity_fullscreen = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int mr_media_route_controller_material_dialog_b = 2130903066;
+			public const int mr_media_route_chooser_dialog = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int mr_media_route_list_item = 2130903067;
+			public const int mr_media_route_controller_material_dialog_b = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int notification_media_action = 2130903068;
+			public const int mr_media_route_list_item = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int notification_media_cancel_action = 2130903069;
+			public const int notification_media_action = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int notification_template_big_media = 2130903070;
+			public const int notification_media_cancel_action = 2130903070;
 			
 			// aapt resource value: 0x7f03001f
-			public const int notification_template_big_media_narrow = 2130903071;
+			public const int notification_template_big_media = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int notification_template_lines = 2130903072;
+			public const int notification_template_big_media_narrow = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int notification_template_media = 2130903073;
+			public const int notification_template_lines = 2130903073;
 			
 			// aapt resource value: 0x7f030022
-			public const int notification_template_part_chronometer = 2130903074;
+			public const int notification_template_media = 2130903074;
 			
 			// aapt resource value: 0x7f030023
-			public const int notification_template_part_time = 2130903075;
+			public const int notification_template_part_chronometer = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public const int select_dialog_item_material = 2130903076;
+			public const int notification_template_part_time = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public const int select_dialog_multichoice_material = 2130903077;
+			public const int select_dialog_item_material = 2130903077;
 			
 			// aapt resource value: 0x7f030026
-			public const int select_dialog_singlechoice_material = 2130903078;
+			public const int select_dialog_multichoice_material = 2130903078;
 			
 			// aapt resource value: 0x7f030027
-			public const int support_simple_spinner_dropdown_item = 2130903079;
+			public const int select_dialog_singlechoice_material = 2130903079;
+			
+			// aapt resource value: 0x7f030028
+			public const int support_simple_spinner_dropdown_item = 2130903080;
 			
 			static Layout()
 			{
@@ -3791,6 +3824,22 @@ namespace BeaconTest.Droid
 			}
 			
 			private Layout()
+			{
+			}
+		}
+		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f0d0000
+			public const int menu_roxwebview = 2131558400;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
 			{
 			}
 		}
@@ -3870,6 +3919,15 @@ namespace BeaconTest.Droid
 			
 			// aapt resource value: 0x7f070028
 			public const int accept = 2131165224;
+			
+			// aapt resource value: 0x7f070049
+			public const int action_settings = 2131165257;
+			
+			// aapt resource value: 0x7f07004a
+			public const int appId = 2131165258;
+			
+			// aapt resource value: 0x7f07004b
+			public const int app_name = 2131165259;
 			
 			// aapt resource value: 0x7f070005
 			public const int auth_google_play_services_client_facebook_display_name = 2131165189;
@@ -3991,8 +4049,23 @@ namespace BeaconTest.Droid
 			// aapt resource value: 0x7f070029
 			public const int decline = 2131165225;
 			
+			// aapt resource value: 0x7f07004c
+			public const int dummy_button = 2131165260;
+			
+			// aapt resource value: 0x7f07004d
+			public const int dummy_content = 2131165261;
+			
+			// aapt resource value: 0x7f07004e
+			public const int hello_world = 2131165262;
+			
+			// aapt resource value: 0x7f07004f
+			public const int latitude = 2131165263;
+			
 			// aapt resource value: 0x7f070048
 			public const int library_name = 2131165256;
+			
+			// aapt resource value: 0x7f070050
+			public const int longitude = 2131165264;
 			
 			// aapt resource value: 0x7f07002c
 			public const int mr_media_route_button_content_description = 2131165228;
@@ -4024,6 +4097,12 @@ namespace BeaconTest.Droid
 			// aapt resource value: 0x7f070031
 			public const int mr_user_route_category_name = 2131165233;
 			
+			// aapt resource value: 0x7f070051
+			public const int sendLogs = 2131165265;
+			
+			// aapt resource value: 0x7f070052
+			public const int setAppId = 2131165266;
+			
 			// aapt resource value: 0x7f070047
 			public const int status_bar_notification_info_overflow = 2131165255;
 			
@@ -4032,6 +4111,15 @@ namespace BeaconTest.Droid
 			
 			// aapt resource value: 0x7f070026
 			public const int store_picture_title = 2131165222;
+			
+			// aapt resource value: 0x7f070053
+			public const int title_activity_fullscreen = 2131165267;
+			
+			// aapt resource value: 0x7f070054
+			public const int title_activity_roxwebview = 2131165268;
+			
+			// aapt resource value: 0x7f070055
+			public const int title_activity_url_launcher = 2131165269;
 			
 			// aapt resource value: 0x7f070000
 			public const int wallet_buy_button_place_holder = 2131165184;
@@ -4456,6 +4544,18 @@ namespace BeaconTest.Droid
 			
 			// aapt resource value: 0x7f080079
 			public const int Base_Widget_AppCompat_Toolbar_Button_Navigation = 2131230841;
+			
+			// aapt resource value: 0x7f08012d
+			public const int ButtonBar = 2131231021;
+			
+			// aapt resource value: 0x7f08012e
+			public const int ButtonBarButton = 2131231022;
+			
+			// aapt resource value: 0x7f080130
+			public const int FullscreenActionBarStyle = 2131231024;
+			
+			// aapt resource value: 0x7f08012f
+			public const int FullscreenTheme = 2131231023;
 			
 			// aapt resource value: 0x7f080019
 			public const int Platform_AppCompat = 2131230745;
@@ -5174,6 +5274,16 @@ namespace BeaconTest.Droid
 			
 			// aapt resource value: 1
 			public const int AppCompatTextView_textAllCaps = 1;
+			
+			public static int[] ButtonBarContainerTheme = new int[] {
+					2130772215,
+					2130772216};
+			
+			// aapt resource value: 1
+			public const int ButtonBarContainerTheme_metaButtonBarButtonStyle = 1;
+			
+			// aapt resource value: 0
+			public const int ButtonBarContainerTheme_metaButtonBarStyle = 0;
 			
 			public static int[] CustomWalletTheme = new int[] {
 					2130771983};

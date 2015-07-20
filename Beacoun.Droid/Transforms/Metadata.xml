@@ -8,4 +8,7 @@
   -->
   <remove-node path="/api/package[@name='org.slf4j.helpers']" />
   <remove-node path="/api/package[@name='org.slf4j.impl']" />
+
+  <remove-node path="/api/package[@name='com.loopj.android.http']/class[@name='BinaryHttpResponseHandler']" />
+
 </metadata>

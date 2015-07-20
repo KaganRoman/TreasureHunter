@@ -126,15 +126,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Xamarin.Android.Bindings.targets" />
   <ItemGroup>
-    <EmbeddedJar Include="Jars\ROXIMITY_SDK_1_3_53.jar" />
-    <EmbeddedJar Include="Jars\slf4j-log4j12-1.7.10.jar" />
-    <EmbeddedJar Include="Jars\beaconr.jar" />
-    <EmbeddedJar Include="Jars\slf4j-api-1.7.10.jar" />
-  </ItemGroup>
-  <ItemGroup>
-    <ReferenceJar Include="Jars\android-async-http-1.4.6.jar" />
-  </ItemGroup>
-  <ItemGroup>
     <XamarinComponentReference Include="xamandroidsupportv4-18">
       <Version>22.2.0.0</Version>
       <Visible>False</Visible>
@@ -147,5 +138,11 @@
       <Version>25.0.0.0</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <LibraryProjectZip Include="Jars\ROXIMITY_SDK_1_3_53.aar" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedJar Include="Jars\android-async-http-1.4.6.jar" />
   </ItemGroup>
 </Project>
