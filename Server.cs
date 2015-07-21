@@ -29,7 +29,12 @@ namespace BeaconTest
 
 		public void UpdateServer(object message)
 		{
-			_hubProxy.Invoke ("updateServer", message);
+			try
+			{
+				_hubProxy.Invoke ("updateServer", message);
+			}
+			catch(Exception e) {
+			}
 		}
 
 		private void UpdateUsersFromServer(Dictionary<string, int> users)
