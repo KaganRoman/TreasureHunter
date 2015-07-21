@@ -126,18 +126,23 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Xamarin.Android.Bindings.targets" />
   <ItemGroup>
-    <LibraryProjectZip Include="Jars\slf4j-1.7.10.zip" />
-  </ItemGroup>
-  <ItemGroup>
+    <XamarinComponentReference Include="xamandroidsupportv4-18">
+      <Version>22.2.0.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamandroidsupportv7appcompat">
+      <Version>22.2.0.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
     <XamarinComponentReference Include="googleplayservices">
       <Version>25.0.0.0</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedJar Include="Jars\ROXIMITY_SDK_1_3_53.jar" />
+    <LibraryProjectZip Include="Jars\ROXIMITY_SDK_1_3_53.aar" />
   </ItemGroup>
   <ItemGroup>
-    <ReferenceJar Include="Jars\android-async-http-1.4.6.jar" />
+    <EmbeddedJar Include="Jars\android-async-http-1.4.6.jar" />
   </ItemGroup>
 </Project>

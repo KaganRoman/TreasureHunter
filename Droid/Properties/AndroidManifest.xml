@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.rumblenews.beackontest">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.rumblenews">
 	<uses-sdk android:minSdkVersion="18" android:targetSdkVersion="21" />
 	<application android:label="TreasureHunter">
+		<meta-data android:name="ROXIMITY_APPLICATION_ID" android:value="7ca3ad0cf7904952a675a645a00b9c51" />
 	</application>
-
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 	// For purposes of making power-efficient data decisions
 
@@ -46,6 +46,13 @@
         android:label="URL Launcher" >
     </activity>
 
+    <activity
+        android:name="beacontest.droid.MainActivity"
+        android:configChanges="orientation"
+    	android:screenOrientation="portrait">
+    </activity>
+
+
     <receiver android:name="com.roximity.system.clapis.GeofenceReceiver"
         android:exported="false">
         <intent-filter >
@@ -73,7 +80,4 @@
     </receiver>
 
     <!-- End GCM Receiver -->
-
-    <meta-data android:name="ROXIMITY_APPLICATION_ID" android:value="7ca3ad0cf7904952a675a645a00b9c51" />
-
 </manifest>
