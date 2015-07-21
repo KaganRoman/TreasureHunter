@@ -13,7 +13,8 @@ using Com.Roximity.Sdk.External;
 
 namespace BeaconTest.Droid
 {
-	[Activity (Label = "BeaconTest.Droid", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	[Activity (Label = "BeaconTest.Droid", Icon = "@drawable/icon", MainLauncher = true, 
+		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, ScreenOrientation = ScreenOrientation.Portrait)]
 	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity, IROXIMITYEngineListener
 	{
 		private BeaconBrodcast _receiver;
