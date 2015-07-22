@@ -11,6 +11,11 @@ namespace BeaconTest
 		public string ProximityValue { get; set; }
 		public string ProximityString { get; set; }
 		public bool Visited { get; set; }
+
+		public override string ToString ()
+		{
+			return string.Format ("[Name={0}, ProximityValue={1}, Visited={2}]", Name, ProximityValue, Visited);
+		}
 	}
 	
 	public interface IBeaconReceiver

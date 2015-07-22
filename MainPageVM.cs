@@ -66,6 +66,7 @@ namespace BeaconTest
 				_beaconsStatus = value;
 				OnPropertyChanged ();
 				OnPropertyChanged ("Found");
+				UpdateServer ();
 			}
 		}
 
@@ -153,7 +154,6 @@ namespace BeaconTest
 					_sound.PlayMp3File ("Sounds/coin.wav");	
 				}
 			} 
-			UpdateServer ();
 			return l;
 		}
 
@@ -175,7 +175,6 @@ namespace BeaconTest
 			_timerCancel = new CancellationTokenSource ();
 			ResetBeacons ();
 			Task.Factory.StartNew (async () => await StartTimer());
-			UpdateServer ();
 		}
 
 		private void Stop(bool playSound = true)
@@ -187,7 +186,6 @@ namespace BeaconTest
 			if (_timerCancel != null)
 				_timerCancel.Cancel ();
 			_timerCancel = null;
-			UpdateServer ();
 		}
 
 		private async Task StartTimer()
