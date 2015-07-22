@@ -56,8 +56,10 @@ function MainCtrl($scope, $http, $interval, Hub) {
         if (!u.Beacons) return 0;
         return _.reduce(u.Beacons, function(memo, beacon) {
             var num = 0;
-            if (visited && beacon.Visited === true) num = 1;
-            if (!visited && beacon.ProximityString) num = 1;
+            if (visited && beacon.Visited === true)
+                num = 1;
+            if (!visited && beacon.ProximityString && beacon.ProximityString !== 'unknown')
+                num = 1;
             return memo + num;
         }, 0);
     };
@@ -94,7 +96,8 @@ function MainCtrl($scope, $http, $interval, Hub) {
                             beacons.push(beacon);
                         }
                         if (b.Visited === true) beacon.Visited++;
-                        if (b.ProximityString) beacon.Visible++;
+                        if (b.ProximityString && b.ProximityString !== 'unknown')
+                            beacon.Visible++;
                     });
                 });
                 scope.beacons = beacons;
